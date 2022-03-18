@@ -1,0 +1,68 @@
+import  React, {useState} from 'react';
+import { Text, View, StyleSheet } from 'react-native';
+import Constants from 'expo-constants';
+import AssetExample from './components/AssetExample';
+import { Card } from 'react-native-paper';
+
+export default function App() {
+  const [Items, setItems] =useState([
+    {key:1 , item:'Item 1'},
+    {key:1 , item:'Item 2'},
+    {key:1 , item:'Item 3'},
+    {key:1 , item:'Item 4'},
+    {key:1 , item:'Item 5'},
+    {key:1 , item:'Item 6'},
+    {key:1 , item:'Item 7'},
+    {key:1 , item:'Item 8'},
+    {key:1 , item:'Item 9'},
+    {key:1 , item:'Item 10'},
+  
+  ])
+  
+  return (
+    <View style={styles.container}>
+      {
+        Items.map((object)=>{
+          return(
+            <View style={styles.item}>
+              <Text style={styles.text}>{object.item}</Text>
+            </View>
+          );
+
+        })
+      }
+      
+      
+
+     
+      
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    paddingTop: Constants.statusBarHeight,
+    backgroundColor: '#ecf0f1',
+    padding: 8,
+  },
+  item: {
+    flex: 1,
+    justifyContent: 'center',
+    //paddingTop: Constants.statusBarHeight,
+    alignItems:'center',
+    
+    backgroundColor: 'grey',
+    borderRadius:'10',
+    marginTop:10,
+    
+  },
+  text: {
+    fontSize:'30',
+    fontStyle:'italic',
+  },
+  
+  
+});//using array concept i.e., using map function
