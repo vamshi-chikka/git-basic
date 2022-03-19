@@ -1,0 +1,82 @@
+import * as React from 'react';
+import { Text, View, StyleSheet,Image,Button,Alert,TouchableOpacity,Pressable } from 'react-native';
+import Constants from 'expo-constants';
+import AssetExample from './components/AssetExample';
+import { Card } from 'react-native-paper';
+fun = () =>
+    {
+      alert("Image Clicked!!!");
+    }
+export default function App() {
+  return (
+    
+    <View style={styles.container}>
+      <Text style={styles.text}>Up tO 60% off | Tropical hues home furnishing from local shops</Text> 
+      <View style={styles.container1}>
+        <TouchableOpacity activeOpacity = { .5 } onPress={fun}>
+          <Image style={{ width:300,height:300}} source={{url:'https://m.media-amazon.com/images/I/91aLjAYHTRL._SX679_.jpg'}}/>
+        </TouchableOpacity>
+          //<Pressable onPress={onPressHandler}>
+             <Text style={styles.text3}> Amazon Brand Vedaka - Popular Whole Almonds ,500g</Text>
+          //</Pressable>
+      
+       
+        <View style={styles.toMakeButtonInRow}>
+          <Button title="Rs:349"/>
+          <Button onPress={() => Alert.alert('Right button pressed')} title="(Rs:78.80/100g)"/>
+          <Text style={{marginTop:6,fontSize:20,}}>(47%off)</Text>
+        </View>
+        <View style={styles.view2}>
+          <Image style={{marginRight:30,width:55,height:19}} source={{uri:'https://m.media-amazon.com/images/I/31Ip4aURUpL.png'}}/>
+          <Text style={styles.text2}>FREE and FAST delivery for prime</Text>
+        </View>
+      </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 0.7,
+    justifyContent: 'center',
+    //paddingTop: Constants.statusBarHeight,
+    backgroundColor: '#fff',
+    alignItems:'center',
+    //padding: 8,
+  },
+  container1: {
+    flex: 1,
+    justifyContent: 'center',
+    //paddingTop: Constants.statusBarHeight,
+    backgroundColor: '#fff',
+    alignItems:'center',
+    //padding: 8,
+  },
+  text:{
+    fontSize:20,
+    fontStyle:Blob,
+    marginTop:40,
+  },
+  toMakeButtonInRow:{
+    //flex:1,
+    flexDirection:'row',
+  },
+  view2:{
+    flexDirection:'row',
+  },
+  text2:{
+    fontSize:18,
+    fontStyle:Blob,
+    //marginTop:40,
+  },
+  text3:{
+    fontSize:20,
+    fontStyle:"normal",
+    //fontStyle:Blob,
+    fontWeight:100,
+    
+    //marginTop:40,
+  },
+
+  
+});
