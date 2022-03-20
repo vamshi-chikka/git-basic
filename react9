@@ -1,0 +1,92 @@
+import * as React from 'react';
+import { Text, View, StyleSheet,Image ,Button,TouchableOpacity} from 'react-native';
+import Constants from 'expo-constants';
+import AssetExample from './components/AssetExample';
+import { Card } from 'react-native-paper';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import Materialicon from 'react-native-vector-icons/FontAwesome5';
+import Ink from 'react-native-vector-icons/MaterialCommunityIcons'
+
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <View style={{ flexDirection: 'row' }}>
+        <Text style={{fontSize: 30, fontWeight: 'bold',marginTop: 50,paddingRight: 200, }}> Menu</Text>
+           <Icon name="settings"size="40" style={{ marginTop: 50, paddingLeft: 10 }} />
+           <Icon name="search"  size="40" style={{ marginTop: 50, paddingLeft: 10 }} />
+       </View>
+       <View style={{  flexDirection: 'row',paddingRight:120,marginBottom:10 }}>
+        <Image style={{width:75,height:75,borderRadius:40}} source={{uri:'https://scontent.fhyd11-1.fna.fbcdn.net/v/t1.18169-9/14021604_1778683045737276_615441114239995895_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=MO5qa2e48EMAX_sla9J&_nc_ht=scontent.fhyd11-1.fna&oh=00_AT8ahIhgmAWcfmQMT71RY-IxlhD3vOQXDriMBc2aK_WE9w&oe=625E3DB8'}}/>
+        <View style={{flex:1,flexDirection:'coloumn'}}>
+          <Text style={{paddingLeft:10,marginTop:10,fontSize:23,fontWeight:"bold"}}>Chikka Vamshi</Text>
+        <Text style={{paddingLeft:10,fontWeight:'300',fontSize:20}}>See your profile</Text>
+        </View>
+       </View>
+       <View style={{flexDirection:'row',marginBottom:10,height:70,}}>
+        <View style={{backgroundColor:'white',width:'43%',marginRight:10,borderRadius:10}}>
+         <Materialicon name="user-friends"  size="40" style={{ marginTop: 0, paddingLeft: 12 }} />
+          <Text style={{fontSize:17,fontWeight:'bold',marginTop:5}}>Friends</Text>
+        </View>
+        <View style={{backgroundColor:'white',width:'43%',borderRadius:10}}>
+          <Icon name="groups"  size="50" style={{ marginTop: 0, paddingLeft: 12 }} />
+          <Text style={{fontSize:17,fontWeight:'bold',}}>Groups</Text>
+        </View>
+       </View>
+       <View style={{flexDirection:'row',marginBottom:10,height:70,}}>
+        <View style={{backgroundColor:'white',width:'43%',marginRight:10,borderRadius:10}}>
+         <Icon name="house"  size="40" style={{ marginTop: 0, paddingLeft: 12 }} />
+          <Text style={{fontSize:17,fontWeight:'bold',marginTop:5}}>Marketplace</Text>
+        </View>
+        <View style={{backgroundColor:'white',width:'43%',borderRadius:10}}>
+          <Icon name="ondemand-video"  size="40" style={{ marginTop: 0, paddingLeft: 12 }} />
+          <Text style={{fontSize:17,fontWeight:'bold',marginTop:6}}>Videos on Watch</Text>
+        </View>
+       </View>
+       <View style={{flexDirection:'row',marginBottom:10,height:70,}}>
+        <View style={{backgroundColor:'white',width:'43%',marginRight:10,borderRadius:10}}>
+         <Icon name="watch-later"  size="40" style={{ marginTop: 0, paddingLeft: 12 }} />
+          <Text style={{fontSize:17,fontWeight:'bold',marginTop:5}}>Memories</Text>
+        </View>
+        <View style={{backgroundColor:'white',width:'43%',borderRadius:10}}>
+          <Materialicon name="bookmark"  size="40" style={{ marginTop: 10, paddingLeft: 12 }} />
+          <Text style={{fontSize:17,fontWeight:'bold',}}>Saved</Text>
+        </View>
+       </View>
+       <View style={{flexDirection:'row',marginBottom:10,height:70,}}>
+        <View style={{backgroundColor:'white',width:'43%',marginRight:10,borderRadius:10}}>
+         <Materialicon name="flag"  size="40" style={{ marginTop: 10, paddingLeft: 12 }} />
+          <Text style={{fontSize:17,fontWeight:'bold',marginTop:5}}>Pages</Text>
+        </View>
+        <View style={{backgroundColor:'white',width:'43%',borderRadius:10}}>
+          <Materialicon name="calendar-alt"  size="40" style={{ marginTop: 10, paddingLeft: 12 }} />
+          <Text style={{fontSize:17,fontWeight:'bold',}}>Events</Text>
+        </View>
+       </View>
+       <View style={{flexDirection:'row',marginBottom:10,height:70,}}>
+        <View style={{backgroundColor:'white',width:'43%',marginRight:10,borderRadius:10}}>
+         <Ink name="youtube-gaming"  size="40" style={{ marginTop: 0, paddingLeft: 12 }} />
+          <Text style={{fontSize:17,fontWeight:'bold',marginTop:5}}>Gaming</Text>
+        </View>
+        <View style={{backgroundColor:'white',width:'43%',borderRadius:10}}>
+          <Icon name="groups"  size="50" style={{ marginTop: 0, paddingLeft: 12 }} />
+          <Text style={{fontSize:17,fontWeight:'bold',}}>Groups</Text>
+        </View>
+       </View>
+       <View style={{flexDirection:'row',marginBottom:200}}>
+          <TouchableOpacity style={{alignItems: "center",backgroundColor: "#DDDDDD",padding: 10,width:'90%'}}>
+    
+           <Text style={{fontSize:22}}>See more</Text>
+          </TouchableOpacity>
+       </View>
+    </View>
+  );
+}
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#ecf0f1',
+  },
+});
